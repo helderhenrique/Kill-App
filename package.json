@@ -16,8 +16,14 @@
     "ecosystem:cordova",
     "cordova-android"
   ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.4.0"
+    }
+  ],
   "author": "Helder Henrique",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/helderhenrique/Kill-App/issues"
   },
