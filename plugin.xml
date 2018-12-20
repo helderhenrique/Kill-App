@@ -24,6 +24,10 @@
         </feature>
     </config-file>
 
+    <config-file target="AndroidManifest.xml" parent="/*">
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />           
+    </config-file>
+
     <config-file parent="/manifest/application" target="AndroidManifest.xml">
         <service
             android:name="com.helderhenrique.android.cordova.plugin.killedapp.CheckAppKilledService"
