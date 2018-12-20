@@ -1,5 +1,5 @@
 module.exports = {
-    checkAppKilled: function(successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "KillApp", "checkAppKilled", []);
+    checkAppKilled: function(args, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "KillApp", "checkAppKilled", [args]);
     }
 };

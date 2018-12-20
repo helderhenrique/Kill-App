@@ -18,14 +18,16 @@ public class KillApp extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         cordova.getThreadPool().execute(new Runnable() {
             public void run() {
-                checkAppKilled();
+                checkAppKilled(args[0]);
             }
         });
         return true;
     }
 
-    private void checkAppKilled() {
+    private void checkAppKilled(uuid) {
         Activity context = cordova.getActivity();
-        context.startService(new Intent(context, com.helderhenrique.android.cordova.plugin.killedapp.CheckAppKilledService.class));
+        Intent int = new Intent(context, com.helderhenrique.android.cordova.plugin.killedapp.CheckAppKilledService.class)
+        int.putExtra("UUID", uuid)
+        context.startService(int);
     }
 }
