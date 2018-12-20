@@ -2,14 +2,15 @@
 <plugin 
     id="cordova-plugin-killapp" 
     version="1.0.0" 
-    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns="http://apache.org/cordova/ns/plugins/1.0">
 
     <name>KillApp</name>
 
     <engines>
       <engine name="cordova" version=">=3.4.0" />
     </engines>
+
+    <asset src="www/KillApp.js" target="js/KillApp.js" />
 
     <js-module name="KillApp" src="www/KillApp.js">
         <clobbers target="cordova.plugins.KillApp" />
@@ -21,6 +22,10 @@
         <feature name="KillApp">
             <param name="android-package" value="com.helderhenrique.android.cordova.plugin.killedapp.KillApp" />
         </feature>
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/*">
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />           
     </config-file>
 
     <config-file parent="/manifest/application" target="AndroidManifest.xml">

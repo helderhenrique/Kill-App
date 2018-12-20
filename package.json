@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/helderhenrique/Kill-App.git"
+    "url": "git+https://github.com/GuilhermeSanches/cordova-plugins-killapp.git"
   },
   "keywords": [
     "ecosystem:cordova",
@@ -25,7 +25,7 @@
   "author": "Helder Henrique",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/helderhenrique/Kill-App/issues"
+    "url": "https://github.com/GuilhermeSanches/cordova-plugins-killapp/issues"
   },
-  "homepage": "https://github.com/helderhenrique/Kill-App#readme"
+  "homepage": "https://github.com/GuilhermeSanches/cordova-plugins-killapp#readme"
 }
