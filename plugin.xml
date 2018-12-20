@@ -7,7 +7,9 @@
 
     <name>KillApp</name>
 
-    <asset src="www/KillApp.js" target="js/KillApp.js" />
+    <engines>
+      <engine name="cordova" version=">=3.0.0" />
+    </engines>
 
     <js-module name="KillApp" src="www/KillApp.js">
         <clobbers target="cordova.plugins.KillApp" />
