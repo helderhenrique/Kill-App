@@ -29,8 +29,8 @@ xmlns:android="http://schemas.android.com/apk/res/android">
                 android:enabled="true"
                 android:exported="false" />
 </config-file>
-<source-file src="src/com/helderhenrique/android/cordova/plugin/killedapp/KillApp.java" target-dir="src/com/helderhenrique/android/cordova/plugin/killedapp" />
-<source-file src="src/com/helderhenrique/android/cordova/plugin/killedapp/CheckAppKilledService.java" target-dir="src/com/helderhenrique/android/cordova/plugin/killedapp" />
+<source-file src="src/com/helderhenrique/android/cordova/plugin/killedapp/KillApp.java" target-dir="src/com/helderhenrique/android/cordova/plugin/killedapp/" />
+<source-file src="src/com/helderhenrique/android/cordova/plugin/killedapp/CheckAppKilledService.java" target-dir="src/com/helderhenrique/android/cordova/plugin/killedapp/" />
 
 </platform>
 
