@@ -29,7 +29,7 @@ public class CheckAppKilledService extends Service {
             Log.d("Service","not null");
             String uuid_ = (String) extras.get("UUID");
             Log.d("Service", "UUID is "+uuid_);
-             uuid = uuid_;
+            uuid = uuid_;
 
         }
     }
@@ -42,12 +42,12 @@ public class CheckAppKilledService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.d("on destroy called", "gps state on destroy called first");
+        Log.d("on destroy called", "on destroy");
     }
 
     @Override
     public void onTaskRemoved(Intent rootIntent) {
-        Log.e("ClearFromRecentService", "END - Facily");
+        Log.e("ClearFromRecentService", "END");
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("geolocations/" + uuid).child("status");
         myRef.setValue("app_killed");
