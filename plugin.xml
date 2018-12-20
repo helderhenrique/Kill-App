@@ -1,33 +1,36 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin 
-id="cordova-plugin-killapp" 
-version="1.0.0" 
-xmlns="http://apache.org/cordova/ns/plugins/1.0" 
-xmlns:android="http://schemas.android.com/apk/res/android">
+    id="cordova-plugin-killapp" 
+    version="1.0.0" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-<name>KillApp</name>
+    <name>KillApp</name>
 
-<js-module name="KillApp" src="www/KillApp.js">
+    <asset src="www/KillApp.js" target="js/KillApp.js" />
 
-<clobbers target="cordova.plugins.KillApp" />
-</js-module>
+    <js-module name="KillApp" src="www/KillApp.js">
+        <clobbers target="cordova.plugins.KillApp" />
+    </js-module>
 
-<platform name="android">
+    <platform name="android">
 
-<config-file parent="/*" target="res/xml/config.xml">
-<feature name="KillApp">
-<param name="android-package" value="com.helderhenrique.android.cordova.plugin.killedapp.KillApp" />
-</feature>
-</config-file>
-<config-file parent="/*" target="AndroidManifest.xml">
-<service
-                android:name="com.helderhenrique.android.cordova.plugin.killedapp.CheckAppKilledService"
-                android:enabled="true"
-                android:exported="false" />
-</config-file>
-<source-file src="src/com/helderhenrique/android/cordova/plugin/killedapp/KillApp.java" target-dir="src/com/helderhenrique/android/cordova/plugin/killedapp/" />
-<source-file src="src/com/helderhenrique/android/cordova/plugin/killedapp/CheckAppKilledService.java" target-dir="src/com/helderhenrique/android/cordova/plugin/killedapp/" />
+    <config-file parent="/*" target="res/xml/config.xml">
+        <feature name="KillApp">
+            <param name="android-package" value="com.helderhenrique.android.cordova.plugin.killedapp.KillApp" />
+        </feature>
+    </config-file>
 
-</platform>
+    <config-file parent="/*" target="AndroidManifest.xml">
+        <service
+            android:name="com.helderhenrique.android.cordova.plugin.killedapp.CheckAppKilledService"
+            android:enabled="true"
+            android:exported="false" />
+        </config-file>
+        
+    <source-file src="src/com/helderhenrique/android/cordova/plugin/killedapp/KillApp.java" target-dir="src/com/helderhenrique/android/cordova/plugin/killedapp/" />
+    <source-file src="src/com/helderhenrique/android/cordova/plugin/killedapp/CheckAppKilledService.java" target-dir="src/com/helderhenrique/android/cordova/plugin/killedapp/" />
+
+    </platform>
 
 </plugin>
