@@ -50,6 +50,6 @@ public class CheckAppKilledService extends Service {
         Log.e("ClearFromRecentService", "END - Facily");
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("geolocations/" + uuid).child("status");
-        myRef.setValue("offiline");
+        myRef.setValue("app_killed");
     }
 }
