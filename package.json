@@ -16,12 +16,6 @@
     "ecosystem:cordova",
     "cordova-android"
   ],
-  "engines": [
-    {
-      "name": "cordova",
-      "version": ">=3.4.0"
-    }
-  ],
   "author": "Helder Henrique",
   "license": "MIT",
   "bugs": {
