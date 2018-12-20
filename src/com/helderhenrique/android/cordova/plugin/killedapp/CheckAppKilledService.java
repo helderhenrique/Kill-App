@@ -21,7 +21,7 @@ public class CheckAppKilledService extends Service {
         } else {
             Log.d("Service","not null");
             String uuid = (String) extras.get("UUID");
-            Log.d("UUID is "+uuid)
+            Log.d("UUID is "+uuid);
         }
     }
 
