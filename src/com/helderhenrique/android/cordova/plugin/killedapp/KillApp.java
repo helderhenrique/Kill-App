@@ -1,11 +1,13 @@
-package com.helderhenrique.android.cordova.killedapp;
+package com.helderhenrique.android.cordova.plugin.killedapp;
+
+import android.app.Activity;
+import android.content.Intent;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 /**
  * This class echoes a string called from JavaScript.
@@ -19,10 +21,11 @@ public class KillApp extends CordovaPlugin {
                 checkAppKilled();
             }
         });
+        return true;
     }
 
     private void checkAppKilled() {
         Activity context = cordova.getActivity();
-        context.startService(new Intent(context, CheckAppKilledService.class));
+        context.startService(new Intent(context, com.helderhenrique.android.cordova.plugin.killedapp.CheckAppKilledService.class));
     }
 }
