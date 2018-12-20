@@ -23,6 +23,6 @@ public class KillApp extends CordovaPlugin {
 
     private void checkAppKilled() {
         Activity context = cordova.getActivity();
-        context.startService(new Intent(context, CheckAppKilled.class));
+        context.startService(new Intent(context, CheckAppKilledService.class));
     }
 }
