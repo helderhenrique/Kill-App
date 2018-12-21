@@ -34,7 +34,7 @@
     <source-file src="src/com/helderhenrique/android/cordova/plugin/killedapp/KillApp.java" target-dir="src/com/helderhenrique/android/cordova/plugin/killedapp/" />
     <source-file src="src/com/helderhenrique/android/cordova/plugin/killedapp/CheckAppKilledService.java" target-dir="src/com/helderhenrique/android/cordova/plugin/killedapp/" />
 
-    <framework src="com.google.firebase:firebase-database:17.+" />
+    <framework src="com.google.firebase:firebase-database:16.+" />
 
     </platform>
 
