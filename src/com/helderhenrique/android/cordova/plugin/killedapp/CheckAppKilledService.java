@@ -9,28 +9,27 @@ import android.util.Log;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-
-
 public class CheckAppKilledService extends Service {
     public String uuid = null;
 
     @Override
-    public IBinder onBind(Intent in){
+    public IBinder onBind(Intent in) {
         return null;
     }
 
     @Override
-    public void onStart(Intent intent, int startId){
+    public void onStart(Intent intent, int startId) {
         super.onStart(intent, startId);
-        Bundle extras = intent.getExtras();
-         if(extras == null) {
-            Log.d("Service","null");
-        } else {
-            Log.d("Service","not null");
-            String uuid_ = (String) extras.get("UUID");
-            Log.d("Service", "UUID is "+uuid_);
-            uuid = uuid_;
-
+        if (intent != null) {
+            Bundle extras = intent.getExtras();
+            if (extras == null) {
+                Log.d("Service", "null");
+            } else {
+                Log.d("Service", "not null");
+                String uuid_ = (String) extras.get("UUID");
+                Log.d("Service", "UUID is " + uuid_);
+                uuid = uuid_;
+            }
         }
     }
 
