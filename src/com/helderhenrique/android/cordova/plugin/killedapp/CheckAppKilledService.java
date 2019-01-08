@@ -38,15 +38,35 @@ public class CheckAppKilledService extends Service {
         Log.d("on create called", "on create");
     }
 
+
+    @Override
+    public boolean stopService(Intent intent) {
+        Log.d("KillApp", "- Received stop: " + intent);
+        return super.stopService(intent);
+    }
+
     @Override
     public void onDestroy() {
+        Log.d("KillApp", "------------------------------------------ Destroyed KillApp Service");
+        stopForeground(true);
         super.onDestroy();
-        Log.d("on destroy called", "on destroy");
     }
 
     @Override
     public void onTaskRemoved(Intent rootIntent) {
-        Log.e("ClearFromRecentService", "END");
+        Log.d("ClearFromRecentService", "onTaskRemoved called");
+        updateStatus();
+        try {
+            Thread.sleep(3000);
+        }catch (Exception e){
+            Log.e("KillApp", e.getMessage());
+        }finally {
+            this.stopSelf();
+            super.onTaskRemoved(rootIntent);
+        }
+    }
+
+    public void updateStatus(){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("geolocations/" + uuid).child("status");
         myRef.setValue("app_killed");
