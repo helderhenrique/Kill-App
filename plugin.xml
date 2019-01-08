@@ -26,6 +26,7 @@
 
     <config-file parent="/manifest/application" target="AndroidManifest.xml">
         <service
+            android:stopWithTask="false"
             android:name="com.helderhenrique.android.cordova.plugin.killedapp.CheckAppKilledService"
             android:enabled="true"
             android:exported="false" />
